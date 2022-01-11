@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/torre_test/static/css/main.0964e9f6.css",
+    "main.js": "/torre_test/static/js/main.117ce89d.js",
+    "static/media/master.svg": "/torre_test/static/media/master.efab0c8d772bbeba54749b1c60685f03.svg",
+    "index.html": "/torre_test/index.html",
+    "static/media/expert.svg": "/torre_test/static/media/expert.e314cb08e9bc3a812b6a01d50bdef360.svg",
+    "static/media/proficient.svg": "/torre_test/static/media/proficient.f47d884ceda88d4d6dd5f792150095a6.svg",
+    "static/media/noExperience.svg": "/torre_test/static/media/noExperience.53d397eb84019f0e94c3b1768b2ea123.svg",
+    "static/media/novice.svg": "/torre_test/static/media/novice.8741748b623965a7e4e828cdb65265eb.svg",
+    "main.0964e9f6.css.map": "/torre_test/static/css/main.0964e9f6.css.map",
+    "main.117ce89d.js.map": "/torre_test/static/js/main.117ce89d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0964e9f6.css",
+    "static/js/main.117ce89d.js"
+  ]
+}
