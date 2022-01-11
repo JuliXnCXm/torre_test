@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    background-color: #27292d;
+    justify-content: space-between;
+    color: white;
+    height: 50px;
+    position: relative;
+    width: 100%;
+    box-shadow: 5px 5px 5px #000000;
+}
+.header--title a{
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+    font-style: normal;
+}
+.header--title {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+a {
+    text-decoration-line: none;
+}
+
+#menu {
+    font-size: 40px;
+    padding: 10px;
+}
+#search {
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+.header--search {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
