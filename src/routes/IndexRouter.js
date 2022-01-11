@@ -5,10 +5,10 @@ import UserProfile from "../pages/UserProfile";
 
 const IndexRouter = () => {
     return (
-      <Routes>
+    <Routes>
         <Route path="/torre_test/" element={<Home />} />
         <Route path="/torre_test/user/:username" element={<UserProfile />} />
-      </Routes>
+    </Routes>
     );
 }
 
