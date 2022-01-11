@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     return (
         <div>
-            <Link>Torrenegra user</Link>
+            <Link to="/torre_test/user/torrenegra">Torrenegra user</Link>
         </div>
     )
 }
