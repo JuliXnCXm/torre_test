@@ -1,3 +1,4 @@
-const server = 'http://localhost:3000';
+const server = "https://backendtorretest.herokuapp.com";
+
 
 module.exports = { server };
