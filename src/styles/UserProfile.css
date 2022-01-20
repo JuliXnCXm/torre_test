@@ -90,6 +90,7 @@ h3 {
 li {
     display: block;
 }
+
 ul {
     padding: 0;
     list-style: none;
@@ -107,3 +108,6 @@ ul {
     opacity: 0.8;
 }
 
+.button--more:hover {
+    opacity: 1;
+}

@@ -10,6 +10,9 @@ export default function StrenghtsContainer({strenghts,img,type, name}) {
         {
             if ( container.current.style.height === "200px" )
             {
+                console.log(container.current.style.overflow)
+                // let button = document.querySelector('#button')
+                // button.style.display = "none"
                 container.current.style.height = "auto"
             } else
             {
@@ -36,7 +39,7 @@ export default function StrenghtsContainer({strenghts,img,type, name}) {
                 </div>
                 <div id='button' onClick={handleClick} className='button--more'>
                     <i style={{ fontSize: '40px' }} class="material-icons  material-icons-outlined">
-                        expand_more
+                    expand_more
                     </i>
                 </div>
             </li>

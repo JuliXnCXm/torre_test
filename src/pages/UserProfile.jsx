@@ -8,6 +8,7 @@ import proficientImage from '../assets/proficient.svg'
 import noviceImage from '../assets/novice.svg'
 import noExperienceImage from '../assets/noExperience.svg'
 import StrenghtsContainer from '../components/StrenghtsContainer'
+import ProgresBar from '../components/ProgressBar'
 
 
 const UserProfile = () =>
@@ -16,7 +17,7 @@ const UserProfile = () =>
     const {user, strenghts, loading} = useUser();
 
 
-    return ( loading ? <div>Loading...</div> :
+    return ( loading ? <ProgresBar show={loading}/> :
         (
             <>
                 <Header/>
