@@ -2,8 +2,24 @@
     width: 480px;
     background-color: #27292d;
     padding: 20px;
+    height: 100vh;
+    overflow: scroll;
     color: white;
 }
+
+.userProfile::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.userProfile::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.userProfile::-webkit-scrollbar-thumb {
+    background-color: #27292d;
+    border-radius: 20px;
+    border: 2px solid #373b41;
+}
+
 .userProfile--container {
     display: flex;
     flex-direction: column;
@@ -12,8 +28,9 @@
     padding: 30px;
 }
 
-h1 {
+.userProfile--container__name {
     font-weight: 300;
+    text-align: center;
 }
 
 .outside {
