@@ -3,6 +3,7 @@ import { Form , Button} from 'react-bootstrap';
 import AuthContext from '../context/AuthContext'
 import useLogin from '../hooks/useLogin';
 import '../styles/Login.css'
+import Register from './Register';
 
 
 const Login = () =>
@@ -16,15 +17,20 @@ const Login = () =>
         handleSubmit,
         handleForm } = useLogin();
 
-    return (
+    return ( register ? <Register/> : (
+
         <div>
             <div className='secondHeader'>
-                <i class="material-icons material-icons-outlined">
+                <div className='secondHeader--nav' onClick={() => {
+                    setRegister(true)
+                }}>
+                    <i class="material-icons material-icons-outlined">
                     arrow_back
-                </i>
-                <h2>SIGN IN</h2>
+                    </i>
+                    <h2>SIGN UP</h2>
+                </div>
             </div>
-            <div className='containerForm'>
+            <div className='container'>
                 <Form className='containerForm' onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="email">
                         <Form.Label></Form.Label>
@@ -36,9 +42,9 @@ const Login = () =>
                     </Form.Group>
                     <Button className='buttonAuth' type="submit">Submit</Button>{' '}
                 </Form>
-                <Button className='buttonOption' onClick={() => { setRegister( true ) }}>sign up</Button>
+
             </div>
         </div>
-    );
+    ));
 }
 export default Login

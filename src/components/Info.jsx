@@ -14,9 +14,7 @@ const Info = ({handleClose}) => {
                 <section className='ModalInfo--containerInfo__secleft'>
                     <h2>The following futures were created using Torre`s API</h2>
                     <ul className='feature--list'>
-                        <li>Search in header by name</li>
-                        <li>Search in header by oppertunity</li>
-                        <li>User profile</li>
+                        <li>User profile given in the url</li>
                     </ul >
                 </section>
                 <section className='ModalInfo--containerInfo__secrig'>

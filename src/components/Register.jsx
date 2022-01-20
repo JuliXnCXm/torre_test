@@ -1,19 +1,31 @@
 import React, {useState} from 'react';
 import { Form, Button } from 'react-bootstrap';
 import useRegister from '../hooks/useRegister'
-import '../styles/Register.css'
+import Login from './Login';
 
 
 const Register = () =>
 {
     const [ login, setLogin ] = useState( false );
+
     const { form,
         handleSubmit,
         handleForm } = useRegister();
-    return (
+
+    return (login ?<Login/> : (
         <>
-            <div className='containerForm'>
-                <h2>Register</h2>
+            <div className='secondHeader'>
+                <div className='secondHeader--nav' onClick={() =>
+                {
+                    setLogin(true)
+                }}>
+                    <i class="material-icons material-icons-outlined">
+                        arrow_back
+                    </i>
+                    <h2>SIGN IN</h2>
+                </div>
+            </div>
+            <div className='container'>
                 <Form className='containerForm' onSubmit={handleSubmit}>
                     <Form.Group className='containerRegisterForm--username mb-3' controlId="username">
                         <Form.Label></Form.Label>
@@ -33,15 +45,14 @@ const Register = () =>
                     </Form.Group>
                     <Form.Group className="containerRegisterForm--skills mb-3" controlId="skills">
                         <Form.Label></Form.Label>
-                        <Form.Control as="textarea" value={form.skills} onChange={handleForm} />
+                        <Form.Control className='formAuth--input' as="textarea" style={{"height": "150px"}} placeholder='write your skills in comma separated values format'  value={form.skills} onChange={handleForm} />
                     </Form.Group>
 
                     <Button className='buttonAuth' type="submit">Submit</Button>{' '}
                 </Form>
-                <Button className='buttonOption' onClick={() => { setLogin( true ) }}>Login</Button>
             </div>
         </>
-    );
+    ));
 };
 
 export default Register;

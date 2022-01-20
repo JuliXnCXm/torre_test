@@ -5,8 +5,8 @@ const useRegister = () =>
 {
 
     const [ form, setForm ] = useState( {
-        name: '',
-        lastname: '',
+        username: '',
+        userlastname: '',
         email: '',
         password: '',
         picture: '',
@@ -24,13 +24,22 @@ const useRegister = () =>
     const handleSubmit = ( e ) =>
     {
         e.preventDefault()
-        console.log( form )
-        handleRegister( form )
+        handleRegister({
+            username: form.username,
+            userlastname: form.userlastname,
+            email: form.email,
+            password: form.password,
+            picture: form.picture,
+            skills: form.skills.split( ',' )
+
+        })
         setForm( {
-            name: '',
-            lastname: '',
+            username: '',
+            userlastname: '',
             email: '',
             password: '',
+            picture: '',
+            skills: '',
         } )
     }
     return {

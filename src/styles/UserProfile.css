@@ -1,4 +1,10 @@
 .userMain {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .userMain {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

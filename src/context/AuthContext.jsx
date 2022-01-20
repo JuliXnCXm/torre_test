@@ -1,9 +1,12 @@
 import React, { createContext , useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { apiLogin, apiRegister } from './Api';
 
 const AuthContext = createContext();
 
 const AuthProvider = ({children}) => {
+
+    const navigate = useNavigate()
 
     const [ auth, setAuth ] = useState( false );
 
@@ -31,6 +34,7 @@ const AuthProvider = ({children}) => {
                 let json = await resp.json();
                 localStorage.setItem( 'token', json.token );
                 setAuth( true )
+                navigate( '/' )
             }
 
         } ).catch( error =>
@@ -51,7 +55,10 @@ const AuthProvider = ({children}) => {
 
         if ( resp.status === 200 )
         {
+            let json = await resp.json();
+            localStorage.setItem( 'token', json.token );
             setAuth( true )
+            navigate('/')
         }
         return resp
     }

@@ -1,4 +1,4 @@
-const server = "http://localhost:3000";
+const server = "https://torretestback.herokuapp.com";
 const apiRegister = `${server}/user/auth/register`;
 const apiLogin = `${server}/user/auth/login`;
 

@@ -1,8 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import '../styles/Header.css'
+import useUser from '../hooks/useUser'
+import AuthContext from '../context/AuthContext'
+
+
 const Header = () => {
 
     const [show , setShow] = useState(false)
+    const {auth} = useContext(AuthContext)
     const handleShow = () => {
         setShow(!show)
     }
@@ -23,9 +28,12 @@ const Header = () => {
                     search
                     </i>
                 </div>
-                <div className='header--auth'>
-                    <a href="/auth" style={{ color: '#afbc36' }} >SIGN IN</a>
-                </div>
+                { !auth ?
+                    <div className='header--auth'>
+                        <a href="/auth" style={{ color: '#afbc36' }} >SIGN IN</a>
+                    </div>
+                : null
+                }
             </div>
         </div>
     )

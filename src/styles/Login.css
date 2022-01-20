@@ -1,20 +1,58 @@
 .buttonAuth {
     background-color: rgb(204, 220, 57);
-    border-radius: 2px;
-    height: 36px;
+    border-radius: 5px;
+    height: 50px;
+    font-weight: lighter;
+    width: 90%;
+    margin-top: 20px;
+    cursor: pointer;
     outline: none;
-    font-size: 14px;
+    font-size: 15   px;
+    letter-spacing: 4px;
     border: none;
 }
 
 .secondHeader {
     background-color: #27292d;
-    color: white;
-    display: flex;
+    box-shadow: 5px 5px 5px #3c3c3c;
 }
 
-.containerForm {
-    width: 30%;
+.secondHeader--nav {
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.secondHeader h2 {
+    margin: 10px;
+}
+
+.container, .containerForm {
     background-color: #27292d;
+    padding: 30px;
+    width: 30%;
     margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formAuth--input {
+    border-style:none ;
+    border: 1px solid white;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    width: 320px;
+    height: 36px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.formAuth--input:focus {
+    border: 1px solid rgb(204, 220, 57);
+    outline: rgb(204, 220, 57);
 }
