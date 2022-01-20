@@ -27,13 +27,13 @@ a {
     display: flex;
     align-items: center;
     height: 30%;
-    width: 60%;
-    border: none;
-    background-color: white;
-    color: black;
-    border-radius: 24px;
+    border: 1px solid;
+    width: 100%;
+    background-color: transparent;
+    border-color: hsla(0, 0%, 100%, .65);
+    color: rgba(255, 255, 255, .65);
+    border-radius: 5px;
     padding: 10px;
-    margin: 50px;
     outline: none;
 }
 
@@ -44,17 +44,31 @@ a {
 }
 #search {
     padding-right: 10px;
+    position: relative;
+    right: 40px;
     font-size: 30px;
+}
+
+.header--options {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: right;
+    margin-right: 50px;
+    width: 40%;
 }
 
 .header--search {
     margin-right: 15px;
-    width: 30%;
     display: flex;
+    width: 40%;
     align-items: center;
     justify-content: flex-start;
 }
 
-.search--active {
-    width: auto;
+.header--search:focus-within {
+    border-color: #ffc107;
+    outline: none;
+    width: 80%;
 }
+

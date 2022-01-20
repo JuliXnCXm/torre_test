@@ -1,0 +1,17 @@
+.notfound--container__text {
+    color: aliceblue;
+    font-weight: revert;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+.notfound--container > i {
+    width: 100%;
+    text-align: center;
+    font-size: 200px;
+    color: #ffc107;
+}
+
+.notfound--container {
+    margin-top: 200px;
+}
