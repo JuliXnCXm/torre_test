@@ -1,22 +1,15 @@
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import Header from '../components/Header';
-import AuthContext from '../context/AuthContext'
+import Login from '../components/Login'
+import Register from '../components/Register'
+import '../styles/Auth.css'
 
 
 const Auth = () => {
-    const { auth } = useContext(AuthContext)
     return (
-        <div>
+        <div className='authContainer'>
             <Header/>
-            <div>
-                <i></i>
-                <h2>SIGN IN</h2>
-            </div>
-            <div>
-                <form action="">
-
-                </form>
-            </div>
+            <Login/>
         </div>
     );
 };

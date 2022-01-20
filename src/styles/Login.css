@@ -1,0 +1,20 @@
+.buttonAuth {
+    background-color: rgb(204, 220, 57);
+    border-radius: 2px;
+    height: 36px;
+    outline: none;
+    font-size: 14px;
+    border: none;
+}
+
+.secondHeader {
+    background-color: #27292d;
+    color: white;
+    display: flex;
+}
+
+.containerForm {
+    width: 30%;
+    background-color: #27292d;
+    margin: auto;
+}
