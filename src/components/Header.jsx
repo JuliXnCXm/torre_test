@@ -24,7 +24,7 @@ const Header = () => {
                     </i>
                 </div>
                 <div className='header--auth'>
-                    <a href="/" style={{ color: '#afbc36' }} >SIGN IN</a>
+                    <a href="/auth" style={{ color: '#afbc36' }} >SIGN IN</a>
                 </div>
             </div>
         </div>
