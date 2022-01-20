@@ -1,22 +1,36 @@
-import React , {useRef } from 'react'
+import React , {useLayoutEffect, useRef, useState } from 'react'
 
 
 export default function StrenghtsContainer({strenghts,img,type, name}) {
 
     const container = useRef(null)
+    const button = useRef(null)
+    const [overflow, setOverflow] = useState(false)
+
+    useLayoutEffect(() => {
+        if ( container.current )
+        {
+            if ( container.current.scrollHeight >= 200 )
+            {
+                setOverflow(true)
+            } else
+            {
+                setOverflow(false)
+            }
+        }
+    } , [])
 
     const handleClick =  (e) => {
         if ( container )
         {
             if ( container.current.style.height === "200px" )
             {
-                console.log(container.current.style.overflow)
-                // let button = document.querySelector('#button')
-                // button.style.display = "none"
                 container.current.style.height = "auto"
+                button.current.style.transform = "rotate(180deg)"
             } else
             {
                 container.current.style.height = "200px"
+                button.current.style.transform = "rotate(0deg)"
             }
         }
     }
@@ -37,11 +51,12 @@ export default function StrenghtsContainer({strenghts,img,type, name}) {
                             } )}
                         </div>
                 </div>
-                <div id='button' onClick={handleClick} className='button--more'>
+                { overflow &&
+                <button ref={button} id='button' onClick={handleClick} className='button--more'>
                     <i style={{ fontSize: '40px' }} class="material-icons  material-icons-outlined">
                     expand_more
                     </i>
-                </div>
+                </button>}
             </li>
             : null
     )
